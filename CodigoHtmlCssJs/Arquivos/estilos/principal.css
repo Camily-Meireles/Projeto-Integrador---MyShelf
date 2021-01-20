@@ -1,0 +1,178 @@
+* {
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', 'Verdana', 'Arial';
+  background-image: url(images/livroteste.png);
+  background-repeat: no-repeat;
+  background-position-y: 90%;
+}
+
+/*---------------------------------------------------------------------/
+
+
+
+/---------------------------HEADER------------------------------------*/
+
+header, footer {
+	background-color:#631271;
+  background-image: url(images/background.png);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+header .icon {
+  display: none;
+  font-size: 3em;
+}
+
+nav ul .botao a:hover{
+  background-color:#F0D530;
+  color: black;
+  transition: 0.3s;
+}
+.menu2 ul li a:hover, a.button:hover {
+  background-color:#6B66FC;
+  color: white;
+}
+
+
+header nav ul {
+  display: flex;
+}
+
+nav.menuinicio ul {
+  padding: 5em 2em;
+  text-align: left;
+  justify-content: space-between;
+	align-items: center;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+nav.menu1 {
+  position: absolute;
+  right: 10%;
+  top: 17px;
+}
+
+nav.menu1 ol li {
+	display: inline;
+  padding: 0.5em;
+}
+
+a.button {
+	border-radius: 5px;
+	background-color:#F0D530;
+	padding: 0.5em;
+  color:black;
+  
+  
+
+}
+/* TESTE 
+a.buttonform{
+  border-radius: 5px;
+	background-color:#F0D530;
+	padding: 0.5em;
+  color:black;
+  width:120px;
+  height:35px;
+  margin-right:125px;
+  margin-left:125px;
+}*/
+
+nav.menu2 ul {
+  background-color:#F0D530;
+  justify-content: center;
+  text-align: center;
+}
+
+nav.menu2 ul li {
+  width: 14.28%;
+}
+
+nav.menu2 ul li a {
+	padding: 2em;
+	font-size: 15px;
+  text-decoration: none;
+  color:black;
+  width: 100%;
+}
+
+header form input {
+  padding: 1em;
+  border-radius: 50px;
+  border: none;
+  width: 20em;
+  outline: none;
+}
+
+header form button {
+  padding: 1em;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  nav.menuinicio ul {
+    padding: 1em 0.5em;
+  }
+  nav.menuinicio ul li.botao {display: none;}
+  nav.menuinicio ul li.botao + li {display: none;}
+  .menuinicio a.icon {
+    display: inline;
+  }
+
+  nav.menu1 {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  nav.menu2 {
+    display: none;
+  }
+}
+
+
+/*--------------------------footer-------------------------------------------*/
+
+footer {
+  overflow: auto;
+}
+
+footer nav {
+  float: left;
+  width: 50%;
+  padding: 50px;
+}
+
+footer nav.menufooter li {
+  margin: 1em;
+}
+
+.redessociais li{
+  display: inline;
+  font-size: 3em;
+  margin: 0.1em;
+}
+
+.redessociais h1{
+  font-size: 1em;
+  color: white;
+}
