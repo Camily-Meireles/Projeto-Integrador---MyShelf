@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MyShelf",
+    "\\MyShelf\\MyShelf",
+    "\\MyShelf\\MyShelf\\Views"
   ],
+  "SelectedNode": "\\MyShelf\\MyShelf\\Views\\index.html",
   "PreviewInSolutionExplorer": false
 }

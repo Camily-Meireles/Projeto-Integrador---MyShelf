@@ -1,0 +1,109 @@
+fieldset {
+  margin: 12em auto;
+  width: 389px;
+  background-color: #631271;
+  text-align: center;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+legend, input[type=submit] {
+  padding: 0.3em 1em;
+  background-color: #F0D530;
+  border-radius: 5px;
+}
+
+legend {
+  font-size: 30px;
+}
+
+fieldset input {
+  margin: 0.6em;
+  padding: 0.6em;
+  padding-left: 0.8em;
+  font-size: 15px;
+  font-weight: bold;
+  width: 261px;
+  border: none;
+}
+
+fieldset div {
+  margin: 1em;
+}
+
+fieldset a {
+  font-size: 20px;
+  text-decoration: none;
+  color:#6B66FC;
+  display: block;
+  margin-bottom: 2em;
+}
+
+input[type=submit] {
+  font-weight: bold;
+  font-size: 20px;
+  padding-left: 3em;
+  padding-right: 3em;
+  width: initial;
+}
+
+
+
+/* ------------------------ ESTANTES.HTML----------------------------------- */
+
+main {
+  width: 50em;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.estantes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: url(images/prateleira.png);
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position-y: -110px;
+  border-radius: 40px;
+  padding: 0 8em 2em;
+  margin: -0.5em 0 -2em;
+}
+
+section {
+  position: relative;
+  text-align: center;
+  margin: 120px 0;
+}
+
+section .title {
+  position: relative;
+  background-color: #F0D530;
+  border-radius: 50px;
+  padding: 0.5em;
+  width: 30%;
+  margin: 0 auto;
+}
+
+section img.denuncia {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+section .estantes img {
+  padding: 2em 0 3.6em;
+  max-width: 20%;
+}
+
+section a {
+  text-decoration: none;
+}
+
+
+/* -------------------------ESTANTE.HTML CSS----------------------------- */
+
+.estantelivros{
+  background-image: url(images/estante.png); 
+}
