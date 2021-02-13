@@ -1,0 +1,28 @@
+﻿@model MyShelf.Models.Estante
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "MyShelf";
+}
+
+<section>
+    <h1> Estante X </h1>
+    <a href="javascript:void()"><img src="icones/denuncia2 8.png" alt="denunciar" class="denuncia"></a>
+
+    <form action="">
+        <input type="search" placeholder="Pesquisar.." name="Pesquisa">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+    <div class="estantes">
+       <a href="@Url.Action(actionName:"Index", controllerName:"Livro")"><img src="icones/livro.png" alt="livro"></a>
+        <img src="icones/livro.png" alt="livro">
+        <img src="icones/livro.png" alt="livro">
+        <img src="icones/livro.png" alt="livro">
+        <img src="icones/livro.png" alt="livro">
+        <img src="icones/livro.png" alt="livro">
+        <img src="icones/livro.png" alt="livro">
+        <img src="icones/livro.png" alt="livro">
+    </div>
+
+</section>

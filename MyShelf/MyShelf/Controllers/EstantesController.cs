@@ -14,7 +14,7 @@ namespace MyShelf.Controllers
     {
         private EFContext context = new EFContext();
 
-        // GET: Fabricantes
+        // GET: Estantes
         public ActionResult Index()
         {
             return View(context.Estantes.OrderBy(c => c.Nome));
@@ -69,7 +69,7 @@ namespace MyShelf.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return View();
             }
             Estante estante = context.Estantes.Find(id);
             if (estante == null)
