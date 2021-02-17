@@ -1,8 +1,6 @@
 ﻿@{
 //Layout = "~/Views/Shared/_Layout.cshtml";
-  ViewBag.Title = "MyShelf";
 }
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -12,17 +10,75 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/estilos/principal.css">
     <link rel="stylesheet" href="~/estilos/index.css">
+    <style type="text/css">
+        .popupCad, .popupEnt {
+            position: fixed;
+            top: 0; bottom :0;
+            left: 0; right:0;
+            padding:0;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+            function abrirCad() {
+                document.getElementById('popupEnt').style.display = 'none';
+                document.getElementById('popupCad').style.display = 'block';
+            }
+            function fecharCad() {
+                document.getElementById('popupCad').style.display = 'none';
+            }
+        function abrirEnt() {
+            document.getElementById('popupCad').style.display = 'none';
+            document.getElementById('popupEnt').style.display = 'block';
+        }
+        function fecharEnt() {
+            document.getElementById('popupEnt').style.display = 'none';
+        }
+
+    </script>
 </head>
 <body>
-
     <header>
+        <!-- --------------------------------------------------- POPUPS ------------------------------------------------------------------ -->
+            <form id="popupCad" class="popupCad">
+                <fieldset>
+                    <legend>Cadastro</legend>
+                    <div>
+                        <a href="javascript: fecharCad();"> Fechar </a>
+                        <input type="text" placeholder="Nome" name="nome"><br>
+                        <input type="email" placeholder="E-mail" name="email"><br>
+                        <input type="text" placeholder="Nome de Usuário" name="username"><br>
+                        <input type="password" placeholder="Senha" name="senha"><br>
+                        <input type="password" placeholder="Confirmar senha" name="confirmar">
+                    </div>
+                    <input type="submit" value="Concluir"><br>
+                    Já possui cadastro?<br>
+                    <a href="acesso.html">Entrar</a>
+                </fieldset>
+            </form>
+
+            <form id="popupEnt" class="popupEnt">
+                <fieldset>
+                    <legend>Cadastro</legend>
+                    <div>
+                        <a href="javascript: fecharEnt();"> Fechar </a>
+                        <input type="email" placeholder="E-mail" name="email"><br>
+                        <input type="password" placeholder="Senha" name="senha"><br>
+                    </div>
+                    <input type="submit" value="Entrar"><br>
+                    Não possui cadastro?<br>
+                    <a href="acesso.html">Cadastre-se</a>
+                </fieldset>
+            </form>
+        <!-- ------------------------------------------------  FIM POPUPS ----------------------------------------------------------------- -->
+
         <nav class="menuinicio">
             <ul>
-                <li><a href="javascript:void(0)" class="icon"><i class="fa fa-book"></i></a> <a href="Home/index.cshtml"><img src="~/icones/logo.png" alt="logo"/></a></li>
+                <li><a href="javascript:void(0)" class="icon"><i class="fa fa-book"></i></a> <a href="Home/index.cshtml"><img src="~/icones/logo.png" alt="logo" /></a></li>
                 <li class="botao"><a href="Estantes/estantes.cshtml">Lançamentos</a></li>
                 <li class="botao"><a href="Estantes/estantes.cshtml">Mais Acessados</a></li>
                 <li>
-                    <form action="">
+                    <form action="" class="lupa">
                         <input type="search" placeholder="Pesquisar.." name="Pesquisa">
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
@@ -30,8 +86,8 @@
                 <li>
                     <nav class="menu1">
                         <ol>
-                            <li><a href="acesso.html">Entrar</a></li>
-                            <li><a class="button" href="cadastro.html">Cadastro</a></li> <!-- POP-UP -->
+                            <li><a href="javascript: abrirEnt();">Entrar</a></li> <!-- chamar popups aqui -->
+                            <li><a class="button" href="javascript: abrirCad();">Cadastro</a></li>
                         </ol>
                     </nav>
                 </li>
@@ -63,27 +119,27 @@
 
         <section class="livrosi">
             <figure>
-                <a href="#"><img src="~/icones/agatha.jpg"></a>
+                <a href="@Url.Action(actionName:"Index", controllerName:"Livros")"><img src="~/icones/agatha.jpg"></a>
                 <figcaption><span class="title">A mansão Hollow</span><br>Agatha Christie</figcaption>
             </figure>
             <figure>
-                <a href="#"><img src="~/icones/edgarap.jpg"></a>
+                <a href="@Url.Action(actionName:"Index", controllerName:"Livros")"><img src="~/icones/edgarap.jpg"></a>
                 <figcaption><span class="title">Os melhores contos</span><br>Edgar Allan Poe</figcaption>
             </figure>
             <figure>
-                <a href="#"><img src="~/icones/quincasborba.jpg"></a>
+                <a href="@Url.Action(actionName:"Index", controllerName:"Livros")"><img src="~/icones/quincasborba.jpg"></a>
                 <figcaption><span class="title">Quincas Borbas</span><br>Machado de Assis</figcaption>
             </figure>
             <figure>
-                <a href="#"><img src="~/icones/naruto.jpg"></a>
+                <a href="@Url.Action(actionName:"Index", controllerName:"Livros")"><img src="~/icones/naruto.jpg"></a>
                 <figcaption><span class="title">Naruto</span><br>Masachi Kishimoto</figcaption>
             </figure>
             <figure>
-                <a href="#"><img src="~/icones/patinhas.jpg"></a>
+                <a href="@Url.Action(actionName:"Index", controllerName:"Livros")"><img src="~/icones/patinhas.jpg"></a>
                 <figcaption><span class="title">O dono de Manhattan</span><br>Carl Barks</figcaption>
             </figure>
             <figure>
-                <a href="#"><img src="~/icones/turmadamonica.png"></a>
+                <a href="@Url.Action(actionName:"Index", controllerName:"Livros")"><img src="~/icones/turmadamonica.png"></a>
                 <figcaption><span class="title">Turma da Mônica</span><br>Maurício de Souza</figcaption>
             </figure>
         </section>
