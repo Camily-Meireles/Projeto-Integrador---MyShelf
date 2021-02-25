@@ -10,30 +10,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/estilos/principal.css">
     <link rel="stylesheet" href="~/estilos/index.css">
-    <style type="text/css">
-        .popupCad, .popupEnt {
-            position: fixed;
-            top: 0; bottom :0;
-            left: 0; right:0;
-            padding:0;
-            display: none;
-        }
-    </style>
     <script type="text/javascript">
-            function abrirCad() {
-                document.getElementById('popupEnt').style.display = 'none';
-                document.getElementById('popupCad').style.display = 'block';
-            }
-            function fecharCad() {
-                document.getElementById('popupCad').style.display = 'none';
-            }
+        function abrirCad() {
+             document.getElementById('popupEnt').style.display = 'none';
+             document.getElementById('popupCad').style.display = 'block';
+             document.getElementById('sucesso').style.display = 'none';
+        }
+        function fecharCad() {
+             document.getElementById('popupCad').style.display = 'none';
+        }
         function abrirEnt() {
-            document.getElementById('popupCad').style.display = 'none';
-            document.getElementById('popupEnt').style.display = 'block';
+             document.getElementById('sucesso').style.display = 'none';
+             document.getElementById('popupCad').style.display = 'none';
+             document.getElementById('popupEnt').style.display = 'block';
         }
         function fecharEnt() {
             document.getElementById('popupEnt').style.display = 'none';
         }
+        function cadConc() {
+            document.getElementById('popupEnt').style.display = 'none';
+            document.getElementById('popupCad').style.display = 'none';
+            document.getElementById('sucesso').style.display = 'block';
+        }       
 
     </script>
 </head>
@@ -49,17 +47,25 @@
                         <input type="email" placeholder="E-mail" name="email"><br>
                         <input type="text" placeholder="Nome de Usuário" name="username"><br>
                         <input type="password" placeholder="Senha" name="senha"><br>
-                        <input type="password" placeholder="Confirmar senha" name="confirmar">
+                        <input type="password" placeholder="Confirmar senha" name="Confirmar">
                     </div>
-                    <input type="submit" value="Concluir"><br>
+                    <!--<input href="javascript: cadConc();" type="submit" value="Concluir"><br>-->
+                    <a class="popbot" href="javascript: cadConc();">Cadastrar</a>
                     Já possui cadastro?<br>
                     <a href="acesso.html">Entrar</a>
                 </fieldset>
             </form>
+            <!-- SUCESSO -->
+            <div class="sucesso" id="sucesso">
+                <h1> Parabéns! </h1>
 
+                <p> Seu login foi realizado com sucesso, clique no botão abaixo para realizar login</p>
+                <input type="submit" value="Concluir" />
+            </div>
+            <!-- --------- -->
             <form id="popupEnt" class="popupEnt">
                 <fieldset>
-                    <legend>Cadastro</legend>
+                    <legend>Entrar</legend>
                     <div>
                         <a href="javascript: fecharEnt();"> Fechar </a>
                         <input type="email" placeholder="E-mail" name="email"><br>

@@ -1,52 +1,28 @@
 ﻿@model IEnumerable<MyShelf.Models.Estante>
 
 @{
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<!--------------------------------------------------------------------------------- -->
+
 <main id="acervo">
-    <section>
-        <div class="title">Estante X</div>
-        <a href="javascript:void()"><img src="icones/denuncia2 8.png" alt="denunciar" class="denuncia"></a>
 
-        <div class="estantes">
-            <img src="icones/livro.png" alt="livro">
-            <img src="icones/livro.png" alt="livro">
-            <img src="icones/livro.png" alt="livro">
-            <img src="icones/livro.png" alt="livro">
-            <img src="icones/livro.png" alt="livro">
-        </div>
+        @foreach (var item in Model)
+        {
+            <section class="estantes">
+              <div class="title">@Html.DisplayFor(modelItem => item.Nome)</div>
+         
+              
+                
+              <div class="acoes">
+                <p>@Html.ActionLink("Editar", "Edit", new { id = item.EstanteID }) | </p>
+                <p>@Html.ActionLink("Ver mais...", "Details", new { id = item.EstanteID }) | </p>
+                <p>@Html.ActionLink("Deletar", "Delete", new { id = item.EstanteID }) | </p>
+              </div>
+            </section>
+        }
 
-        <a href="@Url.Action(actionName:"Details", controllerName:"Estantes")"> Ver mais...</a>
-    </section>
-
-    <section>
-        <div class="title">Estante X</div>
-        <a href="javascript:void()"><img src="icones/denuncia2 8.png" alt="denunciar" class="denuncia"></a>
-
-        <div class="estantes">
-            <img src="icones/livro.png" alt="livro">
-            <img src="icones/livro.png" alt="livro">
-            <img src="icones/livro.png" alt="livro">
-            <img src="icones/livro.png" alt="livro">
-            <img src="icones/livro.png" alt="livro">
-        </div>
-
-        <a href="@Url.Action(actionName:"Details", controllerName:"Estantes")"> Ver mais...</a>
-    </section>
-
-    <section>
-        <div class="title">Estante X</div>
-        <a href="javascript:void()"><img src="icones/denuncia2 8.png" alt="denunciar" class="denuncia"></a>
-
-        <div class="estantes">
-            <img src="icones/livro.png" alt="livro">
-            <img src="icones/livro.png" alt="livro">
-            <img src="icones/livro.png" alt="livro">
-            <img src="icones/livro.png" alt="livro">
-            <img src="icones/livro.png" alt="livro">
-        </div>
-
-        <a href="@Url.Action(actionName:"Details", controllerName:"Estantes")"> Ver mais...</a>
-    </section>
+        <p class="botao-create">
+            @Html.ActionLink("Criar novo", "Create")
+        </p>
 </main>

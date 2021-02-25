@@ -1,28 +1,35 @@
 ﻿@model MyShelf.Models.Estante
 
 @{
+    ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "MyShelf";
 }
 
-<section>
-    <h1> Estante X </h1>
-    <a href="javascript:void()"><img src="icones/denuncia2 8.png" alt="denunciar" class="denuncia"></a>
+<h2>Details</h2>
 
-    <form action="">
-        <input type="search" placeholder="Pesquisar.." name="Pesquisa">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+<div>
+    <h4>Estante</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
 
-    <div class="estantes">
-       <a href="@Url.Action(actionName:"Index", controllerName:"Livro")"><img src="icones/livro.png" alt="livro"></a>
-        <img src="icones/livro.png" alt="livro">
-        <img src="icones/livro.png" alt="livro">
-        <img src="icones/livro.png" alt="livro">
-        <img src="icones/livro.png" alt="livro">
-        <img src="icones/livro.png" alt="livro">
-        <img src="icones/livro.png" alt="livro">
-        <img src="icones/livro.png" alt="livro">
-    </div>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
 
-</section>
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EstanteID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

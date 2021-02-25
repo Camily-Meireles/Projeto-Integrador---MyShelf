@@ -5,19 +5,27 @@
 }
  
 /* ---------- POP UP INÍCIO ---------------------------------- */
+
 .popupCad, .popupEnt {
 	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	padding: 0;
+	top : 50px;
+	left: 35%;
+	padding: 15px;
 	display: none;
+	width: 25%;
+}
+.sucesso {
+	position: fixed;
+	top: 50px;
+	left: 35%;
+	padding: 15px;
+	display: none;
+	width: 25%;
+	background-color: #631271;
 }
 fieldset {
 	/*margin: 12em auto;*/
-	width: 389px;
-	height: 1000px;
+	height: 550px;
 	background-color: #631271;
 	text-align: center;
 	border: none;

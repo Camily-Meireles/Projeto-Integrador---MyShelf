@@ -270,6 +270,7 @@
     <Content Include="Global.asax" />
     <Content Include="icones\agatha.jpg" />
     <Content Include="icones\arrow.png" />
+    <Content Include="icones\cancel.png" />
     <Content Include="icones\denuncia2 8.png" />
     <Content Include="icones\denuncia2.png" />
     <Content Include="icones\edgarap.jpg" />
@@ -500,12 +501,12 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Estantes\Index.cshtml" />
     <Content Include="Views\Estantes\Create.cshtml" />
     <Content Include="Views\Estantes\Edit.cshtml" />
-    <Content Include="Views\Estantes\Details.cshtml" />
     <Content Include="Views\Estantes\Delete.cshtml" />
     <Content Include="Views\Livros\Index.cshtml" />
+    <Content Include="Views\Estantes\Index.cshtml" />
+    <Content Include="Views\Estantes\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
