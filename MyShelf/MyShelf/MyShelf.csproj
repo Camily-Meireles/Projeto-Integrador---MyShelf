@@ -480,6 +480,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Estante.cs" />
     <Compile Include="Models\Livro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -507,6 +508,10 @@
     <Content Include="Views\Livros\Index.cshtml" />
     <Content Include="Views\Estantes\Index.cshtml" />
     <Content Include="Views\Estantes\Details.cshtml" />
+    <Content Include="Views\Livros\Create.cshtml" />
+    <Content Include="Views\Livros\Edit.cshtml" />
+    <Content Include="Views\Livros\Details.cshtml" />
+    <Content Include="Views\Livros\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

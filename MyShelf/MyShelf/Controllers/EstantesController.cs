@@ -14,6 +14,13 @@ namespace MyShelf.Controllers
     {
         private EFContext context = new EFContext();
 
+        private static IList<Categoria> categorias = new List<Categoria>()
+        {
+            new Categoria() {CategoriaID = 1, Nome = "Comédia"},
+            new Categoria() {CategoriaID = 2, Nome = "Terror"},
+            new Categoria() {CategoriaID = 3, Nome = "Outro"}
+        };
+
         // GET: Estantes
         public ActionResult Index()
         {
@@ -23,16 +30,25 @@ namespace MyShelf.Controllers
         // GET: Create 
         public ActionResult Create()
         {
+            ViewBag.CategoriaID = new SelectList(categorias, "CategoriaID", "Nome");
             return View();
         }
-        // POST: Create
+        // POST: Estantes/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create(Estante estante)
         {
-            context.Estantes.Add(estante);
-            context.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                // TODO: Add insert logic here
+                context.Estantes.Add(estante);
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                ViewBag.CategoriaID = new SelectList(categorias, "CategoriaID", "Nome");
+                return View(estante);
+            }
         }
 
         // GET: Fabricantes/Edit/5
@@ -86,12 +102,12 @@ namespace MyShelf.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Estante fabricante = context.Estantes.Find(id);
-            if (fabricante == null)
+            Estante estante = context.Estantes.Find(id);
+            if (estante == null)
             {
                 return HttpNotFound();
             }
-            return View(fabricante);
+            return View(estante);
         }
 
         // POST: Fabricantes/Delete/5

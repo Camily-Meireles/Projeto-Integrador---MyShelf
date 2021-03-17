@@ -23,6 +23,7 @@ namespace MyShelf.Controllers
         // GET: Create 
         public ActionResult Create()
         {
+            ViewBag.EstanteID = new SelectList(context.Estantes.OrderBy(b => b.Nome), "CategoriaId", "Nome");
             return View();
         }
         // POST: Create
@@ -30,9 +31,16 @@ namespace MyShelf.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Livro livro)
         {
-            context.Livros.Add(livro);
-            context.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                context.Livros.Add(livro);
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View(livro);
+            }
         }
 
         // GET: Livros/Edit/5
@@ -47,6 +55,7 @@ namespace MyShelf.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.EstanteID = new SelectList(context.Estantes.OrderBy(b => b.Nome), "EstanteID","Nome", livro.estante.EstanteID);
             return View(livro);
         }
 
@@ -55,13 +64,20 @@ namespace MyShelf.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Livro livro)
         {
-            if (ModelState.IsValid)
+            try
             {
-                context.Entry(livro).State = EntityState.Modified;
-                context.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    context.Entry(livro).State = EntityState.Modified;
+                    context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                return View(livro);
             }
-            return View(livro);
+            catch
+            {
+                return View(livro);
+            }
         }
 
         // GET: Livros/Details/5
@@ -77,6 +93,31 @@ namespace MyShelf.Controllers
                 return HttpNotFound();
             }
             return View(livro);
+        }
+        // GET: Fabricantes/Delete/5
+        public ActionResult Delete(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Livro livro = context.Livros.Find(id);
+            if (livro == null)
+            {
+                return HttpNotFound();
+            }
+            return View(livro);
+        }
+
+        // POST: Fabricantes/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(long id)
+        {
+            Estante estante = context.Estantes.Find(id);
+            context.Estantes.Remove(estante);
+            context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

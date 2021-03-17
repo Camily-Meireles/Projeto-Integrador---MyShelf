@@ -12,5 +12,7 @@ namespace MyShelf.Models
         public string Autor { get; set; }
         public string AnoLancamento { get; set; }
         public string Descricao { get; set; }
+        public long? EstanteID { get; set; }
+        public Estante estante { get; set; }
     }
 }

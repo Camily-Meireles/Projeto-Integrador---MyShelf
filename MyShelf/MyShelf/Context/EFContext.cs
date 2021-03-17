@@ -9,7 +9,11 @@ namespace MyShelf.Context
 {
     public class EFContext : System.Data.Entity.DbContext
     {
-        public EFContext() : base("DB_MyShelf") { }
+        public EFContext() : base("DB_MyShelf")
+        {
+            Database.SetInitializer<EFContext>(
+            new DropCreateDatabaseIfModelChanges<EFContext>());
+        }
         public DbSet<Estante> Estantes { get; set; }
         public DbSet<Livro> Livros { get; set; }
     }

@@ -1,0 +1,62 @@
+﻿@model MyShelf.Models.Livro
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "/~Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Livro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Autor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnoLancamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnoLancamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.estante.Nome)
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-user"></i>
+                </span>
+                @Html.EditorFor(model => model.estante.Nome, new{htmlAttributes = new { @class = "form-control", disabled = "disabled" }})
+            </div>
+        </div>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.LivroID }) |
+    @Html.ActionLink("Voltar a lista", "Index")
+</p>

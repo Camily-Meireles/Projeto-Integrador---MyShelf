@@ -4,30 +4,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-    <h3>Você tem certeza de que quer deletar essa estante?</h3>
-    <div>
-        <h4>Estante</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Nome)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Nome)
-            </dd>
-    
-        </dl>
-    
-        @using (Html.BeginForm()) {
-            @Html.AntiForgeryToken()
-    
-            <div class="form-actions no-color">
-                <input type="submit" value="Delete" class="btn btn-default" /> |
-                @Html.ActionLink("Voltar para a lista", "Index")
-            </div>
-        }
-    </div>
-</body>
-</html>
+<main>
+<div class="ex-estante-div">
+    <h1 class="ex-estante-h1">Deletar</h1>
+    <hr />
+    <p>Tem certeza que deseja deletar a estante ?</p>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <input class="ex-estante-button" type="submit" value="Confirmar" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar para a lista", "Index")
+        </div>
+    }
+</div>
+</main>
