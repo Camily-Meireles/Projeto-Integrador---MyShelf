@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MyShelf",
+    "\\MyShelf\\MyShelf",
+    "\\MyShelf\\MyShelf\\Controllers",
+    "\\MyShelf\\MyShelf\\Views",
+    "\\MyShelf\\MyShelf\\Views\\Estantes"
   ],
+  "SelectedNode": "\\MyShelf\\MyShelf\\Views\\Estantes\\Edit.cshtml",
   "PreviewInSolutionExplorer": false
 }

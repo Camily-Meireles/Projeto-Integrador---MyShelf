@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shelf</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="estilos/principal.css">
+    <link rel="stylesheet" href="estilos/index.css">
+    <link rel="stylesheet" href="estilos/intern.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="menuinicio">
+            <ul>
+                <li><a href="javascript:void(0)" class="icon"><i class="fa fa-book"></i></a> <a href="index.html"><img src="icones/logo.png" alt="logo"></a></li>
+                <li class="botao"><a href="#">Lançamentos</a></li>
+                <li class="botao"><a href="#">Mais Acessados</a></li>
+                <li class="botao"><a href="#">Minhas Estantes</a></li>
+                <form action="">
+                    <input type="search" placeholder="Pesquisar.." name="Pesquisa">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                </li>
+                <li>
+                    <nav class="menu1">
+                        <ol>
+                            <li><a href="perfil.html">Perfil</a></li>
+                            <li><a href="perfil.html"><img src="icones/perfil2.png" alt="Página de Perfil"></a></li>
+                        </ol>
+                    </nav>
+                </li>
+            </ul>
+        </nav>
+        <nav class="menu2">
+            <ul>
+                <li><a href="estantes.html">HQ's</a></li>
+                <li><a href="estantes.html">Nacionais</a></li>
+                <li><a href="estantes.html">Ficção</a></li>
+                <li><a href="estantes.html">Romance</a></li>
+                <li><a href="estantes.html">Terror</a></li>
+                <li><a href="estantes.html">Suspense</a></li>
+                <li><a href="excluir-estante.html">Comédia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+
+
+        <section>
+
+            <form>
+                <fieldset class="edit_estante">
+
+                    <legend>Editar Estante</legend>
+                    <div>
+                        <img style="float: left; padding: 0.5em;" src="icones/addicone.png" alt="Adicionar Ícone">
+                        <div class="div_edit_estante">
+
+                            <input type="text" placeholder="Título" name="title">
+
+                            <select id="generoE">
+                                <option value="1">Romance</option>
+                                <option value="2">Humor</option>
+                            </select>
+
+                            <select id="areaE">
+                                <option value="1">Pessoal</option>
+                                <option value="2">Trabalho</option>
+                                <option value="2">Academico</option>
+                            </select>
+                            <select id="ispublicE">
+                                <option value="1">Pública</option>
+                                <option value="2">Privada</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <input type="submit" value="Salvar" class="salvar_ed_button"><br>
+                </fieldset>
+            </form>
+
+
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        <nav class="menufooter">
+            <ul>
+                <li><a href="#">Mapa do site</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+        </nav>
+        <nav class="redessociais">
+            <h1>Siga-nos!</h1>
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://github.com/Gabo3900/My-Shelf"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
