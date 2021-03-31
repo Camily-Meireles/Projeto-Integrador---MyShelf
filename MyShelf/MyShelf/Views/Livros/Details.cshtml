@@ -2,61 +2,43 @@
 
 @{
     ViewBag.Title = "Details";
-    Layout = "/~Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<main>
+    <!-- ---------------------------------------------------- -->
+    <h1> @Html.DisplayFor(model => model.Nome)</h1>
 
-<div>
-    <h4>Livro</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Autor)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Autor)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AnoLancamento)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AnoLancamento)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Descricao)
-        </dd>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.estante.Nome)
+    <section>
+        <img src="" alt="" />
+        <ul class="informacoes">
+            <!-- <li><a href="perfil.html">Usuário</a></li> -->
+            <li>@Html.DisplayNameFor(model => model.Autor) <br /> @Html.DisplayFor(model => model.Autor)</li>
             <br />
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <i class="glyphicon glyphicon-user"></i>
-                </span>
-                @Html.EditorFor(model => model.estante.Nome, new{htmlAttributes = new { @class = "form-control", disabled = "disabled" }})
-            </div>
-        </div>
+            <li>@Html.DisplayNameFor(model => model.AnoLancamento) <br /> @Html.DisplayFor(model => model.AnoLancamento)</li>
+            <br/>
+        </ul>
 
-    </dl>
-</div>
+        <ul class="tags">
+            <p class="sinopse">
+                @Html.DisplayNameFor(model => model.Descricao)
+                <br />
+                @Html.DisplayFor(model => model.Descricao)
+            </p>
+        </ul>
+    </section>
+
+    <section class="PDF">
+        <h1> PDF's / E-books </h1>
+
+        <img src="" alt="">
+    </section>
+
+    <section class="comentarios">
+        <h1>Comentários</h1>
+    </section>
+</main><!-- ---------------------------------------------------- -->
 <p>
     @Html.ActionLink("Editar", "Edit", new { id = Model.LivroID }) |
-    @Html.ActionLink("Voltar a lista", "Index")
+    <a href="@Url.Action("Details", "Estantes", new { id = Model.EstanteID })"> Retornar à estante | </a>
 </p>

@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Edit";
-    Layout = "/~Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Editar livro</h2>
@@ -67,7 +67,7 @@
 }
 
 <div>
-    @Html.ActionLink("Voltar a lista", "Index")
+    <a href="@Url.Action("Details", "Estantes", new { id = Model.EstanteID })"> Retornar à estante | </a>
 </div>
 
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>

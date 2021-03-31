@@ -1,8 +1,8 @@
 ﻿@model MyShelf.Models.Livro
 
 @{
-    ViewBag.Title = "Delete";
-    Layout = "/~Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Deletar livro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Delete</h2>
@@ -15,10 +15,7 @@
         <dt>
             @Html.DisplayNameFor(model => model.Nome)
         </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
+    
         <dd>
             <div class="input-group">
                 <span class="input-group-addon">
@@ -34,7 +31,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Voltar a lista", "Index")
+            <a href="@Url.Action("Index", "Estantes")">Voltar para a lista</a>
         </div>
     }
 </div>

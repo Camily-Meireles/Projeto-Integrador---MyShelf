@@ -16,9 +16,12 @@ namespace MyShelf.Controllers
 
         private static IList<Categoria> categorias = new List<Categoria>()
         {
-            new Categoria() {CategoriaID = 1, Nome = "Comédia"},
-            new Categoria() {CategoriaID = 2, Nome = "Terror"},
-            new Categoria() {CategoriaID = 3, Nome = "Outro"}
+            new Categoria() {CategoriaID = 1, Nome = "HQ's"},
+            new Categoria() {CategoriaID = 2, Nome = "Ficção"},
+            new Categoria() {CategoriaID = 3, Nome = "Romance"},
+            new Categoria() {CategoriaID = 4, Nome = "Terror"},
+            new Categoria() {CategoriaID = 5, Nome = "Suspense"},
+             new Categoria() {CategoriaID = 6, Nome = "Outro"}
         };
 
         // GET: Estantes

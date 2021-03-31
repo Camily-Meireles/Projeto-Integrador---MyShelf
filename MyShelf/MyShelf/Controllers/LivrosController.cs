@@ -23,7 +23,7 @@ namespace MyShelf.Controllers
         // GET: Create 
         public ActionResult Create()
         {
-            ViewBag.EstanteID = new SelectList(context.Estantes.OrderBy(b => b.Nome), "CategoriaId", "Nome");
+            ViewBag.EstanteID = new SelectList(context.Estantes.OrderBy(b => b.Nome), "EstanteID", "Nome");
             return View();
         }
         // POST: Create
@@ -35,10 +35,11 @@ namespace MyShelf.Controllers
             {
                 context.Livros.Add(livro);
                 context.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Estantes", new { id = livro.EstanteID});
             }
             catch
             {
+                //ViewBag.EstanteID = new SelectList(context.Estantes.OrderBy(b => b.Nome), "CategoriaID", "Nome");
                 return View(livro);
             }
         }
@@ -55,7 +56,7 @@ namespace MyShelf.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.EstanteID = new SelectList(context.Estantes.OrderBy(b => b.Nome), "EstanteID","Nome", livro.estante.EstanteID);
+            ViewBag.EstanteID = new SelectList(context.Estantes.OrderBy(b => b.Nome), "EstanteID","Nome", livro.EstanteID);
             return View(livro);
         }
 
@@ -70,7 +71,7 @@ namespace MyShelf.Controllers
                 {
                     context.Entry(livro).State = EntityState.Modified;
                     context.SaveChanges();
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Details", "Estantes", new { id = livro.EstanteID});
                 }
                 return View(livro);
             }
@@ -114,10 +115,11 @@ namespace MyShelf.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(long id)
         {
-            Estante estante = context.Estantes.Find(id);
-            context.Estantes.Remove(estante);
+            Livro livro = context.Livros.Find(id);
+            long x = livro.EstanteID;
+            context.Livros.Remove(livro);
             context.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", "Estantes", new { id = x });
         }
     }
 }

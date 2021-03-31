@@ -1,7 +1,4 @@
-﻿@{ 
-  //Layout = "~/Views/Shared/_Layout.cshtml"
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="utf-8">
@@ -92,8 +89,8 @@
                 <li>
                     <nav class="menu1">
                         <ol>
-                            <li><a href="javascript: abrirEnt();">Entrar</a></li> <!-- chamar popups aqui -->
-                            <li><a class="button" href="javascript: abrirCad();">Cadastro</a></li>
+                            <li><a href="@Url.Action(actionName:"Login", controllerName:"Usuario")">Entrar</a></li> <!-- chamar popups aqui -->
+                            <li><a href="@Url.Action(actionName:"Create", controllerName:"Usuario")">Cadastro</a></li>
                         </ol>
                     </nav>
                 </li>
@@ -101,12 +98,12 @@
         </nav>
         <nav class="menu2">
             <ul>
-                <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> HQ's</a></li>
+                <li><a href="@Url.Action(actionName:"Index",controllerName:"Estantes")"> HQ's</a></li>
                 <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Nacionais</a></li>
                 <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Ficção</a></li>
                 <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Romance</a></li>
                 <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Terror</a></li>
-                <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Suspense</a></li>
+                <li><a href="@Url.Action(actionName:"Index", controllerName:"Usuario")"> Suspense</a></li>
                 <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Comédia</a></li>
             </ul>
         </nav>

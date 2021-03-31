@@ -137,29 +137,29 @@ section {
     margin: 120px 0;
 }
 
-    section .title {
-        position: relative;
-        background-color: #F0D530;
-        border-radius: 50px;
-        padding: 0.5em;
-        width: 30%;
-        margin: 0 auto;
-    }
+section .title {
+    position: relative;
+    background-color: #F0D530;
+    border-radius: 50px;
+    padding: 0.5em;
+    width: 30%;
+    margin: 0 auto;
+}
 
-    section img.denuncia {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
+section img.denuncia {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
-    section .estantes img {
-        padding: 2em 0 3.6em;
-        max-width: 20%;
-    }
+section .estantes img {
+    padding: 2em 0 3.6em;
+    max-width: 20%;
+}
 
-    section a {
-        text-decoration: none;
-    }
+section a {
+    text-decoration: none;
+}
 
 
 /* -------------------------ESTANTE.HTML CSS----------------------------- */
@@ -239,3 +239,4 @@ input[type=submit].formestante-button {
         width: 277px;
         height: 42px;
     }
+

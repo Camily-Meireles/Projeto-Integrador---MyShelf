@@ -7,35 +7,47 @@
 
 <main class="ex-estante">
 
-<div>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-
-        <dd>
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <i class="glyphicon glyphicon-user"></i>
-                </span>
-                @Html.EditorFor(model => model.Nome, new
+    <div>
+        <dl class="dl-horizontal">
+           
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dd>
+                <a href="@Url.Action("Create", "Livros")"> Adicionar novo livro | </a>
+            </dd>
+            <dd>
+                @foreach (var x in Model.Livros)
                 {
-                    htmlAttributes =
-                new { @class = "form-control", disabled = "disabled" }
-                })
-            </div>
-        </dd>
+                    //<a href="@Url.Action("Create", "Livros")"> Adicionar novo livro | </a>
+                    <br />
+                    @Html.DisplayFor(model => x.Nome)
+                    <br />
+                    <a href="@Url.Action("Edit", "Livros", new { id = x.LivroID })"> Editar livro | </a>
+                    <a href="@Url.Action("Details", "Livros", new { id = x.LivroID })"> Visualizar o livro |</a>
+                    <a href="@Url.Action("Delete", "Livros", new { id = x.LivroID })"> Excluir livro</a>
+                }
+            </dd>
+
+            <dd>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-user"></i>
+                    </span>
+                    @Html.EditorFor(model => model.Nome, new
+                    {
+                        htmlAttributes =
+                    new { @class = "form-control", disabled = "disabled" }
+                    })
+                </div>
+            </dd>
 
 
-    </dl>
-</div>
-<p>
+        </dl>
+    </div>
+    <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.EstanteID }) |
     @Html.ActionLink("Retornar a lista", "Index")
-</p>
+    </p>
 
 </main>

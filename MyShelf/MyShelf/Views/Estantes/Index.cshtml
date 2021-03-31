@@ -11,9 +11,7 @@
         {
             <section class="estantes">
               <div class="title">@Html.DisplayFor(modelItem => item.Nome)</div>
-         
-              
-                
+          
               <div class="acoes">
                 <p>@Html.ActionLink("Editar", "Edit", new { id = item.EstanteID }) | </p>
                 <p>@Html.ActionLink("Ver mais...", "Details", new { id = item.EstanteID }) | </p>
@@ -24,5 +22,8 @@
 
         <p class="botao-create">
             @Html.ActionLink("Criar novo", "Create")
+        </p>
+        <p class="botao-create">
+            <a href="@Url.Action(actionName:"Create", controllerName:"Livros")"> Criar Livro</a>
         </p>
 </main>

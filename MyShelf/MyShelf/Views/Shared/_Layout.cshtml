@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Shelf</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="estilos/principal.css">
-    <link rel="stylesheet" href="estilos/intern.css">
+    <link rel="stylesheet" href="~/estilos/principal.css">
+    <link rel="stylesheet" href="~/estilos/intern.css">
 </head>
 <body>
 
@@ -14,8 +14,8 @@
         <nav class="menuinicio">
             <ul>
                 <li><a href="javascript:void(0)" class="icon"><i class="fa fa-book"></i></a> <a href="Home/index.cshtml"><img src="icones/logo.png" alt="logo"></a></li>
-                <li class="botao"><a href="Estantes/estantes.cshtml">Lançamentos</a></li>
-                <li class="botao"><a href="Estantes/estantes.cshtml">Mais Acessados</a></li>
+                <li class="botao"><a href="@Url.Action(actionName:"Login", controllerName:"Usuario")">Mais acessados</a></li>
+                <li class="botao"><a href="@Url.Action(actionName:"Create", controllerName:"Usuario")">Novidades</a></li>
                 <li>
                     <form action="">
                         <input type="search" placeholder="Pesquisar.." name="Pesquisa">
@@ -25,8 +25,8 @@
                 <li>
                     <nav class="menu1">
                         <ol>
-                            <li><a href="acesso.html">Entrar</a></li>
-                            <li><a class="button" href="cadastro.html">Cadastro</a></li> <!-- POP-UP -->
+                            <li><a href="@Url.Action(actionName:"Login", controllerName:"Usuario")">Entrar</a></li>
+                            <li><a href="@Url.Action(actionName:"Create", controllerName:"Usuario")">Cadastros</a></li> <!-- POP-UP -->
                         </ol>
                     </nav>
                 </li>
@@ -34,13 +34,17 @@
         </nav>
         <nav class="menu2">
             <ul>
-                <li><a href="Estantes/estantes.cshtml">HQ's</a></li>
-                <li><a href="Estantes/estantes.cshtml">Nacionais</a></li>
-                <li><a href="Estantes/estantes.cshtml">Ficção</a></li>
-                <li><a href="Estantes/estantes.cshtml">Romance</a></li>
-                <li><a href="Estantes/estantes.cshtml">Terror</a></li>
-                <li><a href="Estantes/estantes.cshtml">Suspense</a></li>
-                <li><a href="Estantes/estantes.cshtml">Comédia</a></li>
+                <nav class="menu2">
+                    <ul>
+                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> HQ's</a></li>
+                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Nacionais</a></li>
+                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Ficção</a></li>
+                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Romance</a></li>
+                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Terror</a></li>
+                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Usuario")"> Suspense</a></li>
+                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Comédia</a></li>
+                    </ul>
+                </nav>
             </ul>
         </nav>
     </header>

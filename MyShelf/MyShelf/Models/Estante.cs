@@ -10,7 +10,9 @@ namespace MyShelf.Models
         public long EstanteID { get; set; }
         public string Nome { get; set; }
         public long? CategoriaID { get; set; }
+        public long? UsuarioID { get; set; }
         public Categoria Categoria { get; set; }
+        public Usuario Usuario { get; set; }
         public virtual ICollection<Livro> Livros { get; set; }
 
     }
