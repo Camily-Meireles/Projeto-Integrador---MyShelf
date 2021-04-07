@@ -1,0 +1,16 @@
+C:\Users\Caio\source\repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
+C:\Users\Caio\source\repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\bin\Debug\Persistencia.dll.config
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\bin\Debug\EntityFramework.dll
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\bin\Debug\Modelo.dll
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\bin\Debug\Modelo.pdb
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\bin\Debug\EntityFramework.xml
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\obj\Debug\Persistencia.Migrations.InitialCreate.resources
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Persistencia\obj\Debug\Persistencia.csproj.GenerateResource.cache

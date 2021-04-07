@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using MyShelf.Infraestrutura
+<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="utf-8">
@@ -13,43 +14,64 @@
     <header>
         <nav class="menuinicio">
             <ul>
-                <li><a href="javascript:void(0)" class="icon"><i class="fa fa-book"></i></a> <a href="Home/index.cshtml"><img src="icones/logo.png" alt="logo"></a></li>
-                <li class="botao"><a href="@Url.Action(actionName:"Login", controllerName:"Usuario")">Mais acessados</a></li>
-                <li class="botao"><a href="@Url.Action(actionName:"Create", controllerName:"Usuario")">Novidades</a></li>
+                <li><a href="javascript:void(0)" class="icon"><i class="fa fa-book"></i></a> <a href="@Url.Action("Index", "Home", new { Area = "Models"})"><img src="~/icones/logo.png" alt="logo"></a></li>
+                @{
+                    if (Html.GetAuthenticatedUser().ToString() != "")
+                    {
+                        <li class="botao"><a href="#">Lançamentos</a></li>
+                        <li class="botao"><a href="@Url.Action("EstantesPorUsuario", "Estantes", new { userName = Html.GetAuthenticatedUser().ToString(), Area = "Models" })">Minhas Estantes</a></li>
+                    }
+                    else
+                    {
+                        <li class="botao"><a href="#">Lançamentos</a></li>
+                    }
+                }
                 <li>
                     <form action="">
-                        <input type="search" placeholder="Pesquisar.." name="Pesquisa">
+                        <input type="search" placeholder="Pesquisar.." name="Pesquisa" />
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                 </li>
                 <li>
                     <nav class="menu1">
-                        <ol>
-                            <li><a href="@Url.Action(actionName:"Login", controllerName:"Usuario")">Entrar</a></li>
-                            <li><a href="@Url.Action(actionName:"Create", controllerName:"Usuario")">Cadastros</a></li> <!-- POP-UP -->
-                        </ol>
+                        @{
+                            if (Html.GetAuthenticatedUser().ToString() != "")
+                            {
+                                <ol>
+                                    <li>@Html.GetAuthenticatedUser()</li>
+                                    <li><a href="@Url.Action("Logout", "Account", new { Area = "Seguranca"})"> - Sair</a></li>
+                                </ol>
+                            }
+                            else
+                            {
+                                <ol>
+                                    <li><a href="@Url.Action("Login", "Account", new { Area = "Seguranca" }, null)">Entrar</a></li>
+                                    <li><a href="@Url.Action("Create", "Admin", new { Area = "Seguranca" }, null)"> Cadastrar</a></li>
+                                </ol>
+                            }
+                        }
                     </nav>
                 </li>
             </ul>
         </nav>
-        <nav class="menu2">
-            <ul>
+
                 <nav class="menu2">
                     <ul>
-                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> HQ's</a></li>
-                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Nacionais</a></li>
-                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Ficção</a></li>
-                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Romance</a></li>
-                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Terror</a></li>
-                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Usuario")"> Suspense</a></li>
-                        <li><a href="@Url.Action(actionName:"Index", controllerName:"Estantes")"> Comédia</a></li>
+                        <nav class="menu2">
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Estantes", new { id = 1, Area = "Models" })"> HQ's</a></li>
+                                <li><a href="@Url.Action("Index", "Estantes", new { id = 2, Area = "Models" })"> Ficção</a></li>
+                                <li><a href="@Url.Action("Index", "Estantes", new { id = 3, Area = "Models" })"> Romance</a></li>
+                                <li><a href="@Url.Action("Index", "Estantes", new { id = 4, Area = "Models" })"> Terror</a></li>
+                                <li><a href="@Url.Action("Index", "Estantes", new { id = 5, Area = "Models" })"> Suspense</a></li>
+                                <li><a href="@Url.Action("Index", "Estantes", new { id = 6, Area = "Models" })"> Outro</a></li>
+                            </ul>
+                        </nav>
                     </ul>
                 </nav>
-            </ul>
-        </nav>
     </header>
-   
-        @RenderBody();
+
+    @RenderBody();
 
     <footer>
         <nav class="menufooter">
@@ -70,6 +92,7 @@
             </ul>
         </nav>
     </footer>
-
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")"></script>
 </body>
 </html>

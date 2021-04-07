@@ -1,0 +1,6 @@
+C:\Users\Caio\source\repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\bin\Debug\Modelo.dll
+C:\Users\Caio\source\repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Caio\source\repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Caio\source\repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\obj\Debug\Modelo.dll
+C:\Users\Caio\source\repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache

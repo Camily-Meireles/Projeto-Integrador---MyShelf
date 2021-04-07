@@ -224,6 +224,15 @@ input[type=submit].formestante-button {
     font-size: 12px;
 }
 
+.formestante-button {
+    border-radius: 5px;
+    background-color: #F0D530;
+    padding: 0.5em;
+    color: black;
+    margin-left: 85%;
+    font-size: 12px;
+}
+
 .formestante {
     background-color: #36013F;
     width: 50%;
@@ -235,8 +244,8 @@ input[type=submit].formestante-button {
     margin-bottom: 15em;
 }
 
-    .formestante input[type=text] {
-        width: 277px;
-        height: 42px;
-    }
+.formestante input[type=text] {
+    width: 277px;
+    height: 42px;
+}
 

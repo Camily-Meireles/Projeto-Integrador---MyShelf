@@ -1,0 +1,48 @@
+﻿@using MyShelf.Infraestrutura
+@model IEnumerable<Modelo.Models.Estante>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main id="acervo">
+
+    @foreach (var item in Model)
+    {
+        <section class="estantes">
+            <div class="title">@Html.DisplayFor(modelItem => item.Nome)</div>
+
+            <div class="acoes">
+                @{
+                    if ((Html.GetAuthenticatedUser().ToString() != "") && (Html.GetAuthenticatedUser().ToString() == item.UsuarioID))
+                    {
+                        <p class="formestante-button">@Html.ActionLink("Editar ", "Edit", new { id = item.EstanteID }) | </p>
+                        <p class="formestante-button">@Html.ActionLink(" Ver mais... ", "Details", new { id = item.EstanteID }) | </p>
+                        <p class="formestante-button">@Html.ActionLink("  Deletar", "Delete", new { id = item.EstanteID }) | </p>
+                    }
+                    else
+                    {
+                        <p class="formestante-button">@Html.ActionLink("Ver mais...", "Details", new { id = item.EstanteID })</p>
+                    }
+                }
+            </div>
+        </section>
+     }
+
+    @{
+        if (Html.GetAuthenticatedUser().ToString() != "")
+        {
+            <p class="formestante-button">
+                @Html.ActionLink("Criar novo", "Create")
+            </p>
+        }
+        else
+        {
+            <p class="formestante-button">
+                @Html.ActionLink("Cadastre-se aqui", "Create", "Admin", new { Area = "Seguranca"}) para criar novas estantes
+            </p>
+        }
+
+    }
+</main>

@@ -1,0 +1,64 @@
+﻿@using MyShelf.Infraestrutura;
+@using MyShelf.Areas.Seguranca.Models
+@model Modelo.Models.Estante
+
+@{
+    ViewBag.Title = "Detalhes do Livro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="ex-estante">
+
+    <div>
+        <dl class="dl-horizontal">
+
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dd>
+                @{
+                    if (Html.GetAuthenticatedUser().ToString() != "")
+                    {
+                        <a href="@Url.Action("Create", "Livros")"> Adicionar novo livro | </a>
+                    }
+                }
+            </dd>
+
+            <dd>
+                @foreach (var x in Model.Livros)
+                {
+                    <br />
+                    @Html.DisplayFor(model => x.Nome)
+                    <br />
+
+                    if ((Html.GetAuthenticatedUser().ToString() != "") && (Html.GetAuthenticatedUser().ToString() == x.UsuarioID))
+                    {
+                        <a href="@Url.Action("Edit", "Livros", new { id = x.LivroID, id2 = x.EstanteID })"> Editar livro | </a>
+                        <a href="@Url.Action("Details", "Livros", new { id = x.LivroID })"> Visualizar o livro |</a>
+                        <a href="@Url.Action("Delete", "Livros", new { id = x.LivroID })"> Excluir livro</a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Details", "Livros", new { id = x.LivroID })"> Visualizar o livro |</a>
+                    }
+                }
+            </dd>
+
+
+        </dl>
+    </div>
+    @{
+        if (Html.GetAuthenticatedUser().ToString() != "")
+        {
+            <p>
+                @Html.ActionLink("Editar", "Edit", new { id = Model.EstanteID })
+            @Html.ActionLink("Retornar a lista", "Index")
+        </p>
+    }
+    else
+    {
+        @Html.ActionLink("Retornar a lista", "Index")
+    }
+    }
+
+</main>
