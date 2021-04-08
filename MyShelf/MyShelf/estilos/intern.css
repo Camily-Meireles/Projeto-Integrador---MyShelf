@@ -1,111 +1,115 @@
-
 /* ----------------------- DELETAR -------------------------------------*/
 
-.ex-estante {
-    background-color: #36013F;
-    width: 45%;
-    left: 25%;
-    top: 50px;
-    padding: 15px;
-    border-radius: 25px;
-    margin-top: 10em;
-    margin-bottom: 30em;
+.ex{
+  background-color: #36013F;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 25%;
+  top: 50px;
+  padding-bottom:  15px;
+  border-radius: 25px;
+  margin-bottom: 30em;
 }
 
-.ex-estante-div {
-    font-size: 10px;
+
+
+
+
+.ex-title{
+
+  background-color:#F0D530; 
+  padding: 0.5em;
+  margin-left: 35%;
+  margin-right: 35%;
+  border-radius: 5px;
+  width: 30%;
+  color:black;
+  font-size: 20px;
+  font-style: bold;
+  
+
+}
+.ex p{
+  background-color: white; 
+  width:300px; 
+  height: 40px; 
+  border-radius: 5px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 10em
 }
 
-.ex-estante-aviso {
-    background-color: #F0D530;
-    font-size: 10px;
-}
 
-.ex-estante-div img {
-    margin-left: 40%;
-}
 
-.ex-estante-h1 {
-    background-color: #F0D530;
-    border-radius: 5px;
-    padding: 0.5px;
-    color: black;
-    text-align: center;
-}
+ input[type=submit].ex_button{
+  background-color:#B342FF;
+  border-radius: 5px;
+  width: 89px;
+  height: 35px;
+  margin-top: 2em;
+  margin-left: 35em;
+  padding: 0.5px;
+  color:black;
+  font-size: 15px; 
 
-.ex-estante-div p {
-    border-radius: 5px;
-    background-color: #F0D530;
-    padding: 0.5em;
-    color: black;
-    margin: 20px;
-    text-align: center;
-}
+  
+   
 
-.ex-estante-div spam {
-    font-size: 20px;
 }
-
-.ex-estante-button {
-    border-radius: 5px;
-    background-color: #F0D530;
-    padding: 0.5em;
-    color: black;
-    margin-left: 90%;
 }
-
+                
 
 /* ---------------------------------------------------------------------*/
 
 
 fieldset {
-    margin: 12em auto;
-    width: 389px;
-    background-color: #631271;
-    text-align: center;
-    border: none;
-    border-radius: 25px;
-    font-weight: bold;
+  margin: 12em auto;
+  width: 389px;
+  background-color: #631271;
+  text-align: center;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
 }
 
 legend, input[type=submit] {
-    padding: 0.3em 1em;
-    background-color: #F0D530;
-    border-radius: 5px;
+  padding: 0.3em 1em;
+  background-color: #F0D530;
+  border-radius: 5px;
 }
 
 legend {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 fieldset input {
-    margin: 0.6em;
-    padding: 0.6em;
-    padding-left: 0.8em;
-    font-size: 15px;
-    font-weight: bold;
-    width: 261px;
-    border: none;
+  margin: 0.6em;
+  padding: 0.6em;
+  padding-left: 0.8em;
+  font-size: 15px;
+  font-weight: bold;
+  width: 261px;
+  border: none;
 }
 
 fieldset div {
-    margin: 1em;
+  margin: 1em;
 }
 
 fieldset a {
-    font-size: 20px;
-    text-decoration: none;
-    color: #6B66FC;
-    display: block;
-    margin-bottom: 2em;
+  font-size: 20px;
+  text-decoration: none;
+  color:#6B66FC;
+  display: block;
+  margin-bottom: 2em;
 }
 
 input[type=submit] {
-    font-weight: bold;
-    font-size: 20px;
-    padding-left: 3em;
-    padding-right: 3em;
-    width: initial;
+  font-weight: bold;
+  font-size: 20px;
+  padding-left: 3em;
+  padding-right: 3em;
+  width: initial;
 }
 
 
@@ -113,139 +117,336 @@ input[type=submit] {
 /* ------------------------ ESTANTES.HTML----------------------------------- */
 
 main {
-    width: 50em;
-    max-width: 100%;
-    margin: 0 auto;
+  width: 50em;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .estantes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-image: url(images/prateleira.png);
-    background-repeat: repeat-y;
-    background-size: 100% auto;
-    background-position-y: -110px;
-    border-radius: 40px;
-    padding: 0 8em 2em;
-    margin: -0.5em 0 -2em;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-image: url(images/prateleira.png);
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position-y: -110px;
+  border-radius: 40px;
+  padding: 0 8em 2em;
+  margin: -0.5em 0 -2em;
+  width: 830px;
 }
 
 section {
-    position: relative;
-    text-align: center;
-    margin: 120px 0;
+  position: relative;
+  text-align: center;
+  margin: 120px 0;
 }
 
-section .title {
-    position: relative;
-    background-color: #F0D530;
-    border-radius: 50px;
-    padding: 0.5em;
-    width: 30%;
-    margin: 0 auto;
+.title {
+  position: relative;
+  background-color: #F0D530;
+  border-radius: 50px;
+  padding: 0.5em;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
 }
 
-section img.denuncia {
-    position: absolute;
-    top: 0;
-    right: 0;
+.drop_down_estante{
+   list-style: none;
+  float: right;
+  margin-right: 5em;
+} 
+.drop_down_estante li{
+  position: relative;
+  float: left;
+
+}
+.drop_down_estante li a{
+  color: black;
+}
+.drop_down_estante li ul{
+  position: absolute;
+  top:25px;
+  left:0;
+  display:none;
+}
+.drop_down_estante li:hover ul, .drop_down_estante li.over ul{display:block;}
+
+.drop_down_estante li ul li{
+display:block;
+padding: 5px;
+background: white;
+border: 1px solid gray;
+width:150px;
 }
 
 section .estantes img {
-    padding: 2em 0 3.6em;
-    max-width: 20%;
+  padding: 2em 0 3.6em;
+  max-width: 20%;
 }
 
 section a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 
 /* -------------------------ESTANTE.HTML CSS----------------------------- */
-
-.estantelivros {
-    background-image: url(images/estante.png);
-    width: 872px;
-    height: 924px;
+.tit{
+  border-radius: 50px;
+  background-color:#36013F;
+  width: 210px;
+  height: 40px;
+  color:white;
+  font-size: 27px;
+  margin-left: 40%;
+  margin-right: 25%;
 }
 
-.estantes {
-    border-radius: 35px;
+.pesquisa_estante {
+  
+  
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-top: 2em;
+  
+}
+.pesquisa_estante input {
+  padding: 1em;
+  border-radius: 50px;
+  border: none;
+  width: 313px;
+  height: 40px;
+  
+  
+ 
 }
 
-.tit {
-    border-radius: 50px;
-    background-color: #36013F;
-    width: 210px;
-    height: 40%;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    margin-left: 35%;
+.pesquisa_estante button {
+  
+  background-color: #36013F;
+  border-radius: 37px;
+  width: 38px;
+  height: 38px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  
+} 
+.drop_down{
+  margin-top: 1em;
+  list-style: none;
+  float: right;
+  margin-right: 5em;
+} 
+.drop_down li{
+  position: relative;
+  float: left;
+
+}
+.drop_down li a{
+  color: black;
+}
+.drop_down li ul{
+  position: absolute;
+  top:25px;
+  left:0;
+  display:none;
+}
+.drop_down li:hover ul, .drop_down li.over ul{display:block;}
+
+.drop_down li ul li{
+display:block;
+padding: 5px;
+background: white;
+border: 1px solid gray;
+width:150px;
+}
+.estante{
+  
+  background-image: url(images/estante.png); 
+  width: 872px;
+  height: 924px;
+ 
+
+
+}
+.estante{
+  border-radius: 35px;
 }
 
-.estante-button-ex {
-    border-radius: 5px;
-    width: 154px;
-    height: 39.41px;
-    background-color: #F0D530;
-    padding: 0.5em;
-    color: black;
-    margin-right: 90%;
-    font-style: bold;
-    font-size: 13px;
-    margin-bottom: 0%;
+.livros1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 9em;
+  margin-bottom: 3.1em;
+  
+  
+}
+.livros2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 0.5em;
+  
+  
+}
+.livros3{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2em;
+
+}
+/* -------------------------CRIAR.HTML CSS----------------------------- */
+/* -------------------------CRIAR_LIVRO.HTML CSS----------------------------- */
+.criar_livro legend{
+  background-color: #F0D530;
+  width: 30%;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50px;
+
 }
 
-.estante-button-ed {
-    border-radius: 5px;
-    width: 154px;
-    height: 39.41px;
-    background-color: #F0D530;
-    padding: 0.5em;
-    color: black;
-    margin-left: 90%;
-    font-style: bold;
-    font-size: 13px;
-    margin-bottom: 0%;
+.criar_livro{
+
+  background-color: #36013F;
+  width: 814px;
+  height: 283px;  
+  border-radius: 25px;
+  margin-top: 10em;
+  margin-bottom: 15em;
+
+
 }
+.div_criar_livro{
+  margin-top: 2.9em;
+  text-align: center;
+
+
+  
+  
+}
+input[type=submit].salvar_cl_button{
+  background-color:#B342FF;
+  border-radius: 5px;
+  float: right;
+  width: 90px;
+  height: 35px;
+  padding: 0.5px;
+  margin-top: 2em;
+  color:black;
+  font-size: 15px;
+}
+
+.div_criar_livro input[type=text]{
+  width: 29.9%;
+  height: 42px;
+  
+}   
+#generoE2{
+  width: 30%;
+  height: 42px;
+
+}
+#areaE2{
+  width: 30%;
+  height: 42px;
+ 
+
+  
+ 
+
+
+}
+#ispublicE2{
+  width: 30%;
+  height: 42px;
+ 
+ 
+  
+}
+/* -------------------------CRIAR_ESTANTE.HTML CSS----------------------------- */
+
+
+
+
+
 /* -------------------------EDITAR.HTML CSS----------------------------- */
 
+ 
+  
+/* -------------------------EDIT_ESTANTE.HTML CSS----------------------------- */
+.edit_estante legend{
+  background-color: #F0D530;
+  width: 210px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 50px;
 
-
-/* -------------------------FORMESTANTE.HTML CSS----------------------------- */
-input[type=submit].formestante-button {
-    border-radius: 5px;
-    background-color: #F0D530;
-    padding: 0.5em;
-    color: black;
-    margin-left: 85%;
-    font-size: 12px;
 }
 
-.formestante-button {
-    border-radius: 5px;
-    background-color: #F0D530;
-    padding: 0.5em;
-    color: black;
-    margin-left: 85%;
-    font-size: 12px;
+.edit_estante{
+
+  background-color: #36013F;
+  width: 814px;
+  height: 283px;  
+  border-radius: 25px;
+  margin-top: 10em;
+  margin-bottom: 15em;
+
+
+}
+.div_edit_estante{
+  margin-top: 2em;
+  
+
+  
+  
+}
+input[type=submit].salvar_ed_button{
+  background-color:#B342FF;
+  border-radius: 5px;
+  float: right;
+  width: 90px;
+  height: 35px;
+  padding: 0.5px;
+  margin-top: 5em;
+  color:black;
+  font-size: 15px;
 }
 
-.formestante {
-    background-color: #36013F;
-    width: 50%;
-    left: 25%;
-    top: 50px;
-    padding: 15px;
-    border-radius: 25px;
-    margin-top: 10em;
-    margin-bottom: 15em;
-}
+.div_edit_estante input[type=text]{
+  width: 29.9%;
+  height: 42px;
+  margin-right: 3em;
+  justify-content: space-between;
+  
+}   
 
-.formestante input[type=text] {
-    width: 277px;
-    height: 42px;
-}
+#generoE{
+  width: 30%;
+  height: 42px;
 
+}
+#areaE{
+  width: 30%;
+  height: 42px;
+  margin-right: 3em;
+ 
+
+
+}
+#ispublicE{
+  width: 30%;
+  height: 42px;
+  margin-left: 15px;
+  
+}

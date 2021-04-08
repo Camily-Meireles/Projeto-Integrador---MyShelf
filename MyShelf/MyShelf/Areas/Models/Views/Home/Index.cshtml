@@ -27,6 +27,7 @@
                     else
                     {
                         <li class="botao"><a href="#">Lançamentos</a></li>
+                        <li class="botao"><a href="#">Mais Acessados</a></li>
                     }
                 }
                 <li>
@@ -36,21 +37,24 @@
                     </form>
                 </li>
                 <li>
-                    <nav class="menu1">
+                    
                         @{
                             if (Html.GetAuthenticatedUser().ToString() != "")
                             {
                                 <ol>
-                                    <li>@Html.GetAuthenticatedUser()</li>
-                                    <li><a href="@Url.Action("Logout", "Account", new { Area = "Seguranca"})"> - Sair</a></li>
+                                    <li><a href="@Url.Action("Index", "Perfil")"><img src="~/icones/perfil2.png" /></a></li>
+                                    <li style="color:white; font-size: 10px; margin-top:2em;">@Html.GetAuthenticatedUser()</li>
+                                    <li><a href="@Url.Action("Logout", "Account", new { Area = "Seguranca"})" style="color:white; font-size: 10px;"> SAIR</a></li>
                                 </ol>
                             }
                             else
                             {
-                                <ol>
-                                    <li><a href="@Url.Action("Login", "Account", new { Area = "Seguranca" }, null)">Entrar</a></li>
-                                    <li><a href="@Url.Action("Create", "Admin", new { Area = "Seguranca" }, null)"> Cadastrar</a></li>
-                                </ol>
+                                <nav class="menu1">
+                                    <ol>
+                                        <li><a href="@Url.Action("Login", "Account", new { Area = "Seguranca" }, null)">Entrar</a></li>
+                                        <li><a href="@Url.Action("Create", "Admin", new { Area = "Seguranca" }, null)"class="button"> Cadastrar</a></li>
+                                    </ol>
+                                </nav>
                             }
                         }
                     </nav>
