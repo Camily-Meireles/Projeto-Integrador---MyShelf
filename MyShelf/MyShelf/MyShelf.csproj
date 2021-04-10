@@ -312,6 +312,8 @@
     <Content Include="icones\patinhas.jpg" />
     <Content Include="icones\pdf %281%29.png" />
     <Content Include="icones\pdf.png" />
+    <Content Include="icones\perfil.png" />
+    <Content Include="icones\perfil2.png" />
     <Content Include="icones\perfilicon.png" />
     <Content Include="icones\quincasborba.jpg" />
     <Content Include="icones\turmadamonica.png" />

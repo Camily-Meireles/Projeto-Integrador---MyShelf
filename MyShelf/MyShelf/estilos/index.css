@@ -1,62 +1,62 @@
-
 /*--------------------------  corpo  -------------------------------------------*/
 
-main h1 {
+main h1{
 	margin: 2em;
 	font-size: 50px;
-	color: #631271;
+	color:#631271;
+
 }
 
-main h2 {
+main h2{
 	margin-bottom: 1em;
 	margin-top: -3em;
 	color: #631271;
+
 }
 
 /* --------------   LIVROS E TEXTO INICIAL ------------------ */
 main section {
-	text-align: center;
+  text-align: center;
 }
 
 main .livrosi {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-	main .livrosi figure {
-		float: left;
-		margin: 5em;
-		font-size: 15px;
-		text-align: center;
-	}
-
-	main .livrosi figcaption .title {
-		font-size: 30px;
-	}
-
-	main .livrosi img {
-		width: 183px;
-		height: 275px;
-		padding: 1em;
-		transition: all .5s ease;
-	}
-
-		main .livrosi img:hover {
-			padding: 0;
-		}
-
-div.cit {
-	padding: 3em 0.5em;
-	margin: 5em auto;
-	width: 15em;
-	background-color: #F0D530;
-	font-size: 30px;
-	border-radius: 25px;
+main .livrosi figure {
+  float: left;
+	margin: 5em;
+  font-size: 15px;
+  text-align: center;
 }
 
-	div.cit p {
-		font-size: 1em;
-		color: black;
-		text-align: center;
-	}
+main .livrosi figcaption .title {
+  font-size: 30px;
+}
+
+main .livrosi img {
+	width: 183px;
+	height: 275px;
+  padding: 1em;
+  transition: all .5s ease;
+}
+
+main .livrosi img:hover {
+  padding: 0;
+}
+
+div.cit{
+  padding: 3em 0.5em;
+  margin: 5em auto;
+  width:15em;
+  background-color: #F0D530;
+  font-size: 30px;
+  border-radius: 25px;
+}
+div.cit p{
+  font-size: 1em;
+  color: black;
+  text-align: center;
+}

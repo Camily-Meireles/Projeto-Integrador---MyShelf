@@ -4,3 +4,9 @@ C:\Users\Caio\source\repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\
 C:\Users\Caio\source\repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\obj\Debug\Modelo.dll
 C:\Users\Caio\source\repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\obj\Debug\Modelo.pdb
 C:\Users\Caio\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\20181011110023\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\bin\Debug\Modelo.dll
+C:\Users\20181011110023\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\bin\Debug\Modelo.pdb
+C:\Users\20181011110023\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\20181011110023\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\20181011110023\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\obj\Debug\Modelo.dll
+C:\Users\20181011110023\Source\Repos\Camily-Meireles\Projeto-Integrador---MyShelf\MyShelf\Modelo\obj\Debug\Modelo.pdb
