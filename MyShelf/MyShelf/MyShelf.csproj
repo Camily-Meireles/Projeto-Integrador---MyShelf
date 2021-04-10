@@ -426,6 +426,7 @@
     <Content Include="Areas\Seguranca\Views\PapelAdmin\Edit.cshtml" />
     <Content Include="Areas\Seguranca\Views\Admin\Details.cshtml" />
     <Content Include="Areas\Models\Views\Estantes\EstantesPorUsuario.cshtml" />
+    <Content Include="Areas\Models\Views\Livros\Index.cshtml" />
     <None Include="Scripts\jquery-2.2.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />
@@ -543,7 +544,6 @@
     <Content Include="Areas\Models\Views\Estantes\Create.cshtml" />
     <Content Include="Areas\Models\Views\Estantes\Edit.cshtml" />
     <Content Include="Areas\Models\Views\Estantes\Delete.cshtml" />
-    <Content Include="Areas\Models\Views\Livros\Index.cshtml" />
     <Content Include="Areas\Models\Views\Estantes\Details.cshtml" />
     <Content Include="Areas\Models\Views\Livros\Create.cshtml" />
     <Content Include="Areas\Models\Views\Livros\Edit.cshtml" />

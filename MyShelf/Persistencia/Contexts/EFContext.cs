@@ -13,8 +13,7 @@ namespace Persistencia.Contexts
     {
         public EFContext() : base("DB_MyShelf")
         {
-            Database.SetInitializer<EFContext>(new
-            MigrateDatabaseToLatestVersion<EFContext, Configuration>());
+            Database.SetInitializer<EFContext>(new MigrateDatabaseToLatestVersion<EFContext, Configuration>());
         }
         public DbSet<Estante> Estantes { get; set; }
         public DbSet<Livro> Livros { get; set; }

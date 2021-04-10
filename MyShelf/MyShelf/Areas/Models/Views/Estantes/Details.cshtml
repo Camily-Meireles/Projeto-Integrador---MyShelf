@@ -1,5 +1,4 @@
 ﻿@using MyShelf.Infraestrutura;
-@using MyShelf.Areas.Seguranca.Models
 @model Modelo.Models.Estante
 
 @{
@@ -9,56 +8,41 @@
 
 <main class="ex-estante">
 
-    <div>
-        <dl class="dl-horizontal">
+    <section>
+        <h1 class="tit"> @Html.DisplayFor(model => model.Nome) </h1>
+        <a href="javascript:void()"><img src="~/icones/denuncia2 8.png" alt="denunciar" class="denuncia"></a>
+        @{
+            if ((Html.GetAuthenticatedUser().ToString() == Model.UsuarioID) || (Html.GetAuthenticatedUser().ToString() == "Caio221"))
+            {
+                <a href="@Url.Action("Create", "Livros")"> Adicionar novo livro | </a>
+            }
+        }
 
-            <dd>
-                @Html.DisplayFor(model => model.Nome)
-            </dd>
-            <dd>
-                @{
-                    if (Html.GetAuthenticatedUser().ToString() != "")
-                    {
-                        <a href="@Url.Action("Create", "Livros")"> Adicionar novo livro | </a>
-                    }
-                }
-            </dd>
+        <form>
+            <input type="search" placeholder="Pesquisar.." name="Pesquisa">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
 
-            <dd>
-                @foreach (var x in Model.Livros)
-                {
-                    <br />
-                    @Html.DisplayFor(model => x.Nome)
-                    <br />
+        <div class="estantes">
+            @foreach (var x in Model.Livros)
+            {
+                @Html.DisplayFor(model => x.Nome)
+                <a href="@Url.Action("Details", "Livros", new { id = x.LivroID })"> @Html.DisplayFor(model => x.Nome) </a>
+            }
+        </div>
 
-                    if ((Html.GetAuthenticatedUser().ToString() != "") && (Html.GetAuthenticatedUser().ToString() == x.UsuarioID))
-                    {
-                        <a href="@Url.Action("Edit", "Livros", new { id = x.LivroID, id2 = x.EstanteID })"> Editar livro | </a>
-                        <a href="@Url.Action("Details", "Livros", new { id = x.LivroID })"> Visualizar o livro |</a>
-                        <a href="@Url.Action("Delete", "Livros", new { id = x.LivroID })"> Excluir livro</a>
-                    }
-                    else
-                    {
-                        <a href="@Url.Action("Details", "Livros", new { id = x.LivroID })"> Visualizar o livro |</a>
-                    }
-                }
-            </dd>
+    </section>
 
-
-        </dl>
-    </div>
     @{
-        if (Html.GetAuthenticatedUser().ToString() != "")
+        if ((Html.GetAuthenticatedUser().ToString() == Model.UsuarioID) || (Html.GetAuthenticatedUser().ToString() == "Caio221"))
         {
-            <p>
-                @Html.ActionLink("Editar", "Edit", new { id = Model.EstanteID })
+          <a href="@Url.Action("Edit", "Estante", new { id = Model.EstanteID })"> Editar estante</a>
+          <a href="@Url.Action("Index", "Estante", new { id = Model.CategoriaID })"> Voltar para a lista </a>
+        }
+        else
+        {
             @Html.ActionLink("Retornar a lista", "Index")
-        </p>
-    }
-    else
-    {
-        @Html.ActionLink("Retornar a lista", "Index")
-    }
+        }
     }
 
 </main>

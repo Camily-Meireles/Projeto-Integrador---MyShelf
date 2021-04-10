@@ -57,15 +57,31 @@ namespace MyShelf.Areas.Models.Controllers
             }
         }
 
-        public ActionResult EstantesPorUsuario(string userName)
+        /* public ActionResult EstantesPorUsuario(string userName)
         {
             return View(estanteServico.ObterEstantesPorUsuario(userName));
-        }
+        } */
+
         // GET: Estantes
-        public ActionResult Index(long id)
+        public ActionResult Index(long id, string userName)
         {
             //return View(estanteServico.ObterEstantesClassificadasPorNome());
-            return View(estanteServico.ObterEstantesPorCategoria(id));
+            if (userName != null)
+            {
+                return View(estanteServico.ObterEstantesPorUsuario(userName));
+            }
+            else if ((userName == null) && (id != 0))
+            {
+                return View(estanteServico.ObterEstantesPorCategoria(id));
+            }
+            else if ((userName == null) && (id == 0))
+            {
+                return View(estanteServico.ObterEstantesClassificadasPorNome());
+            }
+            else
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
         }
 
         // GET: Create

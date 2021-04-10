@@ -249,3 +249,6 @@ input[type=submit].formestante-button {
     height: 42px;
 }
 
+.acoes{
+    display : block;
+}

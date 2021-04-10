@@ -11,38 +11,41 @@
     @foreach (var item in Model)
     {
         <section class="estantes">
-            <div class="title">@Html.DisplayFor(modelItem => item.Nome)</div>
+            <div class="title"> @Html.DisplayFor(modelItem => item.Nome) </div>
+            <div>
+                <nav>
+                    <ul>
+                        @{
+                            if ((Html.GetAuthenticatedUser().ToString() == item.UsuarioID) || (Html.GetAuthenticatedUser().ToString() == "Caio221"))
+                            {
+                                <li>@Html.ActionLink("Editar ", "Edit", new { id = item.EstanteID }) |</li>
+                                <li>@Html.ActionLink(" Ver mais... ", "Details", new { id = item.EstanteID }) | </li>
+                                <li>@Html.ActionLink("  Deletar", "Delete", new { id = item.EstanteID }) </li>
+                            }
+                            else
+                            {
+                                <li>@Html.ActionLink("Ver mais...", "Details", new { id = item.EstanteID })</li>
 
-            <div class="acoes">
-                @{
-                    if ((Html.GetAuthenticatedUser().ToString() != "") && (Html.GetAuthenticatedUser().ToString() == item.UsuarioID))
-                    {
-                        <p class="formestante-button">@Html.ActionLink("Editar ", "Edit", new { id = item.EstanteID }) | </p>
-                        <p class="formestante-button">@Html.ActionLink(" Ver mais... ", "Details", new { id = item.EstanteID }) | </p>
-                        <p class="formestante-button">@Html.ActionLink("  Deletar", "Delete", new { id = item.EstanteID }) | </p>
-                    }
-                    else
-                    {
-                        <p class="formestante-button">@Html.ActionLink("Ver mais...", "Details", new { id = item.EstanteID })</p>
-                    }
-                }
+                            }
+                        }
+                    </ul>
+                </nav>
             </div>
         </section>
-     }
-
-    @{
-        if (Html.GetAuthenticatedUser().ToString() != "")
-        {
-            <p class="formestante-button">
-                @Html.ActionLink("Criar novo", "Create")
-            </p>
-        }
-        else
-        {
-            <p class="formestante-button">
-                @Html.ActionLink("Cadastre-se aqui", "Create", "Admin", new { Area = "Seguranca"}) para criar novas estantes
-            </p>
-        }
-
     }
 </main>
+@{
+    if (Html.GetAuthenticatedUser().ToString() != "")
+    {
+        <p class="formestante-button">
+            @Html.ActionLink("Criar novo", "Create")
+        </p>
+    }
+    else
+    {
+        <p class="formestante-button">
+            @Html.ActionLink("Cadastre-se aqui", "Create", "Admin", new { Area = "Seguranca" }) para criar novas estantes
+        </p>
+    }
+
+}

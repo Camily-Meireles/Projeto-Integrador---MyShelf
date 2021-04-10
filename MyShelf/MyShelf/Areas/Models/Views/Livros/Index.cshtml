@@ -1,39 +1,26 @@
-﻿@model IEnumerable<Modelo.Models.Livro>
+﻿@using MyShelf.Infraestrutura
+@model IEnumerable<Modelo.Models.Livro>
+
 @{
+    ViewBag.Title = "Livros - Moderador";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "Livro - MyShelf";
 }
+
 <main>
-    <h1> Livro X </h1>
 
-    <section>
-        <img src="" alt="" />
-        <ul class="informacoes">
-            <li><a href="perfil.html">Usuário</a></li>
-            <li>Escritor</li>
-            <li><a href="estante.html">Estante</a></li>
-            <li>Ano de lançamento</li>
-        </ul>
+    @foreach (var item in Model)
+    {
+        <section class="estantes">
+            <div class="title"> @Html.DisplayFor(modelItem => item.Nome) </div>
+                <div>
+                    <ul>       
+                        <li>@Html.ActionLink("Ver mais...", "Details", new { id = item.EstanteID })</li>
+                    </ul>
+                </div>
+        </section>
+    }
 
-        <ul class="tags">
-            <li>tag1</li>
-            <li>tag2</li>
-            <li>tag3</li>
-            <li>tag4</li>
-            <li>tag4</li>
-        </ul>
-        <p class="sinopse">
-            Dado o fluxo de dados atual, a normalização da data superou o desempenho do polimorfismo aplicado nas classes.Com este commit, a otimização de performance da renderização do DOM complexificou o merge na interpolação dinâmica de strings.Dado o fluxo de dados atual, o último pull request desse SCRUM deletou todas as entradas de estados estáticos nos componentes da UI.
-        </p>
-    </section>
-
-    <section class="PDF">
-        <h1> PDF's / E-books </h1>
-
-        <img src="" alt="">
-    </section>
-
-    <section class="comentarios">
-        <h1>Comentários</h1>
-    </section>
+    <p>
+        <a href="@Url.Action("Index", "Home", new { Area = "Models" })"> Voltar para a Home</a>
+    </p>
 </main>

@@ -18,8 +18,7 @@ namespace MyShelf.Areas.Seguranca.Controllers
         {
             get
             {
-                return HttpContext.GetOwinContext().GetUserManager
-                <GerenciadorPapel>();
+                return HttpContext.GetOwinContext().GetUserManager<GerenciadorPapel>();
             }
         }
         // GET: Seguranca/PapelAdmin

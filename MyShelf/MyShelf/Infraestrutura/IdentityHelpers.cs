@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNet.Identity.Owin;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using MyShelf.Areas.Seguranca.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

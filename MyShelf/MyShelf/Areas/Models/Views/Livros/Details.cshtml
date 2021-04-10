@@ -11,15 +11,19 @@
     <h1> @Html.DisplayFor(model => model.Nome)</h1>
 
     <section>
-        <img src="" alt="" />
+        <img src="~/icones/livro.png" alt="livro"/>
         <ul class="informacoes">
             <!-- <li><a href="perfil.html">Usuário</a></li> -->
             <li>
-                @Html.DisplayNameFor(model => model.Autor) 
-                <br /> 
+                @Html.DisplayNameFor(model => model.UsuarioID)
+                <br />
+                @Html.DisplayFor(model => model.UsuarioID);
+            </li>
+            <li>
+                @Html.DisplayNameFor(model => model.Autor)
+                <br />
                 @Html.DisplayFor(model => model.Autor)
             </li>
-                </br>
             <li>
                 @Html.DisplayNameFor(model => model.AnoLancamento) 
                 <br /> 
@@ -46,7 +50,7 @@
     </section>
 </main><!-- ---------------------------------------------------- -->
 @{
-    if (Html.GetAuthenticatedUser().ToString() != "")
+    if ((Html.GetAuthenticatedUser().ToString() == Model.UsuarioID) || (Html.GetAuthenticatedUser().ToString() == "Caio221"))
     {
        <p> 
           @Html.ActionLink("Editar", "Edit", new { id = Model.LivroID }) |
