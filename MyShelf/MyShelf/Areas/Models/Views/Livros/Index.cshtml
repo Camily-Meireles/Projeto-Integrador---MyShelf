@@ -8,17 +8,27 @@
 
 <main>
 
-    @foreach (var item in Model)
-    {
-        <section class="estantes">
-            <div class="title"> @Html.DisplayFor(modelItem => item.Nome) </div>
-                <div>
-                    <ul>       
-                        <li>@Html.ActionLink("Ver mais...", "Details", new { id = item.EstanteID })</li>
-                    </ul>
-                </div>
-        </section>
-    }
+    <table>
+        <caption>Livros do Sitema</caption>
+
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th colspan="3"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(model => item.Nome)</td>
+                    <td><a href="@Url.Action("Details", "Livros", new { id = item.LivroID, Area = "Models"})"> Detalhes</a></td>
+                    <td><a href="@Url.Action("Delete", "Livros", new { id = item.LivroID, Area = "Models"})"> Excluir </a></td>
+                    <td><a href="@Url.Action("Edit", "Livros", new { id = item.LivroID, id2 = item.EstanteID, Area = "Models"})"> Editar </a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
     <p>
         <a href="@Url.Action("Index", "Home", new { Area = "Models" })"> Voltar para a Home</a>

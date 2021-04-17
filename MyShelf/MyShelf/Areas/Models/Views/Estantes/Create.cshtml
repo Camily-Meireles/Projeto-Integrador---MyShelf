@@ -19,27 +19,27 @@
                 @Html.ValidationSummary(true, "Verifique os seguintes erros", new { @class = "text-danger" })
             </div>
         }
-        <form>
-            <fieldset class="formestante">
+        <form class="formestante">
+            <fieldset>
                 <legend>Criar Nova Estante</legend>
                 <div>
-                    <div class="form-group">
+                    <div>
                         @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
+                        <div>
                             @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div>
                         @Html.LabelFor(model => model.CategoriaID, "CategoriaID", htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
+                        <div>
                             @Html.DropDownList("CategoriaID", null, htmlAttributes: new { @class = "form-control" })
                             @Html.ValidationMessageFor(model => model.CategoriaID, "", new { @class = "text-danger" })
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
+                <div>
+                    <div>
                         <input class="formestante-button" type="submit" value="Create" />
                     </div>
                 </div>

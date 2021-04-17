@@ -8,7 +8,7 @@
 
 <main>
     <!-- ---------------------------------------------------- -->
-    <h1> @Html.DisplayFor(model => model.Nome)</h1>
+    <h1 class="tit"> @Html.DisplayFor(model => model.Nome)</h1>
 
     <section>
         <img src="~/icones/livro.png" alt="livro"/>
@@ -17,7 +17,7 @@
             <li>
                 @Html.DisplayNameFor(model => model.UsuarioID)
                 <br />
-                @Html.DisplayFor(model => model.UsuarioID);
+                @Html.DisplayFor(model => model.UsuarioID)
             </li>
             <li>
                 @Html.DisplayNameFor(model => model.Autor)
@@ -52,13 +52,14 @@
 @{
     if ((Html.GetAuthenticatedUser().ToString() == Model.UsuarioID) || (Html.GetAuthenticatedUser().ToString() == "Caio221"))
     {
-       <p> 
-          @Html.ActionLink("Editar", "Edit", new { id = Model.LivroID }) |
-          <a href = "@Url.Action("Details", "Estantes", new { id = Model.EstanteID })" > Retornar à estante | </a> 
+        <p>
+            @Html.ActionLink("Editar  |", "Edit", new { id = Model.LivroID, id2 = Model.EstanteID })
+            @Html.ActionLink("  Excluir   |", "Delete", new { id = Model.LivroID })
+            <a href="@Url.Action("Details", "Estantes", new { id = Model.EstanteID })">Retornar à estante</a>
         </p>
     }
     else
     {
-        <a href="@Url.Action("Details", "Estantes", new { id = Model.EstanteID })"> Retornar à estante | </a>
+        <a href="@Url.Action("Details", "Estantes", new { id = Model.EstanteID })"> Retornar à estante </a>
     }
 }

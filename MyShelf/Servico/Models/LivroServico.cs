@@ -15,7 +15,7 @@ namespace Servico.Models
         {
             return livroDAL.ObterLivrosClassificadosPorNome();
         }
-        public Livro ObterLivroPorId(long id)
+        public Livro ObterLivroPorId(long? id)
         {
             return livroDAL.ObterLivroPorId(id);
         }

@@ -12,9 +12,6 @@
 }
 
 
-
-
-
 .ex-title{
 
   background-color:#F0D530; 
@@ -63,14 +60,15 @@
 
 
 fieldset {
-  margin: 12em auto;
-  width: 389px;
-  background-color: #631271;
-  text-align: center;
-  border: none;
-  border-radius: 25px;
-  font-weight: bold;
+    margin: 0.5em 0 2em;
+    width: 389px;
+    background-color: #631271;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
 }
+
 
 legend, input[type=submit] {
   padding: 0.3em 1em;
@@ -123,18 +121,18 @@ main {
 }
 
 .estantes {
-  
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-image: url(images/prateleira.png);
-  background-repeat: repeat-y;
-  background-size: 100% auto;
-  background-position-y: -110px;
-  border-radius: 40px;
-  padding: 0 8em 2em;
-  margin: -0.5em 0 -2em;
-  width: 830px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url(images/prateleira.png);
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position-y: -110px;
+    border-radius: 40px;
+    padding: 0 8em 2em;
+    margin: 0.5em 0 2em;
+    width: 830px;
+    height: 250px;
 }
 
 section {
@@ -151,6 +149,7 @@ section {
   width: 30%;
   margin-left: 35%;
   margin-right: 35%;
+  height: 50px;
 }
 
 .drop_down_estante{
@@ -199,19 +198,17 @@ section a {
   width: 210px;
   height: 40px;
   color:white;
-  font-size: 27px;
+  font-size: 25px;
   margin-left: 40%;
   margin-right: 25%;
 }
 
 .pesquisa_estante {
-  
-  
   margin-left: 25%;
   margin-right: 25%;
-  padding-top: 2em;
-  
+  padding-top: 2em;  
 }
+
 .pesquisa_estante input {
   padding: 1em;
   border-radius: 50px;
@@ -222,7 +219,6 @@ section a {
   
  
 }
-
 .pesquisa_estante button {
   
   background-color: #36013F;
@@ -264,15 +260,9 @@ border: 1px solid gray;
 width:150px;
 }
 .estante{
-  
   background-image: url(images/estante.png); 
   width: 872px;
   height: 924px;
- 
-
-
-}
-.estante{
   border-radius: 35px;
 }
 
@@ -448,5 +438,79 @@ input[type=submit].salvar_ed_button{
     width: 30%;
     height: 42px;
     margin-left: 15px;
+}
+
+.acesso {
+    margin: 12em auto;
+    width: 389px;
+    background-color: #631271;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+/* -------------------------FORMESTANTE.HTML CSS----------------------------- */
+input[type=submit].formestante-button {
+    border-radius: 5px;
+    background-color: #F0D530;
+    padding: 0.5em;
+    color: black;
+    margin-left: 85%;
+    font-size: 12px;
+}
+
+.formestante {
+    background-color: #36013F;
+    width: 50%;
+    left: 25%;
+    top: 50px;
+    padding: 15px;
+    border-radius: 25px;
+    margin-top: 10em;
+    margin-bottom: 15em;
+}
+
+.formestante input[type=text] {
+    width: 277px;
+    height: 42px;
+}
+
+
+/* -----------------------  INDEX LIVRO (TABLE) -------------------------------- */
+
+table{
+    border-collapse: collapse;
+    border: 3px solid black;
+    width: 75%;
+} 
+
+tbody{
+    font-size 90%;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: white;
+    background-color: purple;
+}
+tbody a{
+    color: white;
+}
+tfoot{
+    font-weight: bold;
+    font-size: 75%;
+}
+thead {
+    color: blue;
+    background-color: #F0D530;
+}
+td{
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* ----------------------------------------------------------------------------  */
+
+.informacoes{
+    list-style: none;
+    color: black;
 }
 

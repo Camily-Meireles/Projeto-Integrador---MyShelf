@@ -6,9 +6,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<main class="ex-estante">
+<main>
 
-    <section>
+    <section class="estante">
         <h1 class="tit"> @Html.DisplayFor(model => model.Nome) </h1>
         <a href="javascript:void()"><img src="~/icones/denuncia2 8.png" alt="denunciar" class="denuncia"></a>
         @{
@@ -18,26 +18,25 @@
             }
         }
 
-        <form>
+        <form class="pesquisa_estante">
             <input type="search" placeholder="Pesquisar.." name="Pesquisa">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
-
-        <div class="estantes">
+        <h2> Livros </h2>
+        <div>
             @foreach (var x in Model.Livros)
             {
-                @Html.DisplayFor(model => x.Nome)
+                <br />
                 <a href="@Url.Action("Details", "Livros", new { id = x.LivroID })"> @Html.DisplayFor(model => x.Nome) </a>
             }
         </div>
 
     </section>
-
     @{
         if ((Html.GetAuthenticatedUser().ToString() == Model.UsuarioID) || (Html.GetAuthenticatedUser().ToString() == "Caio221"))
         {
-          <a href="@Url.Action("Edit", "Estante", new { id = Model.EstanteID })"> Editar estante</a>
-          <a href="@Url.Action("Index", "Estante", new { id = Model.CategoriaID })"> Voltar para a lista </a>
+          <a href="@Url.Action("Edit", "Estantes", new { id = Model.EstanteID })"> Editar estante</a>
+          <a href="@Url.Action("Index", "Estantes", new { id = Model.CategoriaID })"> Voltar para a lista </a>
         }
         else
         {

@@ -16,7 +16,7 @@ namespace Persistencia.DAL.Models
         {
             return context.Livros.Include(f => f.estante).OrderBy(n => n.Nome);
         }
-        public Livro ObterLivroPorId(long id)
+        public Livro ObterLivroPorId(long? id)
         {
             return context.Livros.Where(p => p.LivroID == id).Include(e => e.estante).First();
         }

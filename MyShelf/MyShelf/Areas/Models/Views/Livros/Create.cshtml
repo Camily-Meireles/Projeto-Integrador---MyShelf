@@ -6,16 +6,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Criar Livro</h2>
-
-
 @using (Html.BeginForm("Create", "Livros", new { userName = Html.GetAuthenticatedUser().ToString() }, FormMethod.Post))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Livro</h4>
-        <hr />
         @Html.ValidationSummary(false, "", new { @class = "text-danger" })
     <fieldset class="formestante">
         <legend>Adicionar Livro</legend>

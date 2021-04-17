@@ -19,7 +19,7 @@
                     if (Html.GetAuthenticatedUser().ToString() ==  "Caio221")
                     {
                         <li class="botao"><a href="@Url.Action("Index", "Estantes", new { userName = "Caio221", id = 0, Area = "Models"})">Minhas Estantes</a></li>
-                        <li class="botao"><a href="@Url.Action("Index", "Estantes", new { id = 0, Area = "Models"})"> Catálogo de Estantes</a></li>
+                        <li class="botao"><a href="@Url.Action("Index", "Estantes", new { id = 0, Area = "Models"})"> Todas Estantes</a></li>
                         <li class="botao"><a href="@Url.Action("Index", "Livros", new { Area = "Models"})">Catálogo de Livros</a></li>
                     }
                     else if (Html.GetAuthenticatedUser().ToString() != "")
@@ -77,7 +77,7 @@
                 </nav>
     </header>
 
-    @RenderBody();
+    @RenderBody()
 
     <footer>
         <nav class="menufooter">

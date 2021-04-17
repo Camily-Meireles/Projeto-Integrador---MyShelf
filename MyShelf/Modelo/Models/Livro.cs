@@ -29,6 +29,7 @@ namespace Modelo.Models
 
         [DisplayName("Estante")]
         public long EstanteID { get; set; }
+        [DisplayName("Usuario")]
         public string UsuarioID { get; set; }
         public Estante estante { get; set; }
     }

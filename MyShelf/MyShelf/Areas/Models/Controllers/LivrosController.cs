@@ -20,7 +20,7 @@ namespace MyShelf.Areas.Models.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Livro livro = livroServico.ObterLivroPorId((long)id);
+            Livro livro = livroServico.ObterLivroPorId((long?)id);
             if (livro == null)
             {
                 return HttpNotFound();
@@ -59,7 +59,7 @@ namespace MyShelf.Areas.Models.Controllers
         }
 
         // GET: Livros
-        [Authorize(Roles = "Moderador")]
+        [Authorize]
         public ActionResult Index()
         {
             return View(livroServico.ObterLivrosClassificadosPorNome());
@@ -117,7 +117,7 @@ namespace MyShelf.Areas.Models.Controllers
             {
                 Livro livro = livroServico.EliminarLivroPorId(id);
                 TempData["Message"] = "Livro " + livro.Nome.ToUpper() + " foi excluído";
-                return RedirectToAction("Index", "Estantes", new { id = livro.EstanteID});
+                return RedirectToAction("Details", "Estantes", new { id = livro.EstanteID});
             }
             catch
             {
